@@ -74,12 +74,6 @@ export function fillTokens(text: string, tokens: Record<string, string>): string
   return result.replace(/\s{2,}/g, " ").replace(/\s+([.,;:!?])/g, "$1").trim();
 }
 
-function contentPool(
-  content: CategoryContent,
-  slot: keyof Pick<CategoryContent, "concepts" | "audiences" | "features" | "mechanics" | "progression" | "monetization" | "highlights" | "risks" | "nextSteps" | "roadmap">,
-): ContentItem[] {
-  return content[slot] ?? [];
-}
 
 function pickScored(
   rng: Rng,
