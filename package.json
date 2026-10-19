@@ -1,0 +1,36 @@
+{
+  "name": "ideaforge",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev -H 0.0.0.0 -p 3000",
+    "build": "next build",
+    "postbuild": "tsx scripts/seed.ts",
+    "start": "next start -H 0.0.0.0 -p 3000",
+    "lint": "next lint",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "diversity": "tsx scripts/diversity-report.ts"
+  },
+  "dependencies": {
+    "@supabase/ssr": "0.12.7",
+    "@supabase/supabase-js": "2.118.0",
+    "next": "15.5.28",
+    "react": "19.1.0",
+    "react-dom": "19.1.0"
+  },
+  "devDependencies": {
+    "@types/node": "22.15.3",
+    "@types/react": "19.1.2",
+    "@types/react-dom": "19.1.2",
+    "autoprefixer": "10.4.21",
+    "eslint": "9.24.0",
+    "eslint-config-next": "15.5.28",
+    "postcss": "8.5.3",
+    "tailwindcss": "3.4.19",
+    "tsx": "4.19.3",
+    "typescript": "5.8.3",
+    "vitest": "3.1.2"
+  }
+}
